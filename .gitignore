@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment secrets — NEVER commit
+.env
+
+# Playwright browser auth state (contains session cookies/tokens)
+data/linkedin_auth.json
+data/glassdoor_auth.json
+
+# Database (regeneratable)
+data/jobs.db
+
+# CV files (personal data)
+data/cv/*
+!data/cv/.gitkeep
+
+# Generated reports
+data/exports/*
+!data/exports/.gitkeep
+
+# Debug screenshots
+data/screenshots/*
+!data/screenshots/.gitkeep
+
+# Alembic versions (keep in VCS, but not the DB itself)
+# alembic/versions/ — intentionally NOT ignored
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

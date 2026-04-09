@@ -1,0 +1,66 @@
+# Target company career pages
+# Add entries here to include company career sites in the scrape.
+# strategy: "bs4"        — fast, for server-rendered pages
+# strategy: "playwright" — for React/JS-rendered pages
+# job_list_selector / job_title_selector: CSS selectors; leave null for full-text keyword scan
+
+companies:
+  - name: "CyberArk"
+    careers_url: "https://www.cyberark.com/company/careers/"
+    strategy: playwright
+    job_list_selector: null
+    job_title_selector: null
+
+  - name: "monday.com"
+    careers_url: "https://monday.com/careers"
+    strategy: playwright
+    job_list_selector: null
+    job_title_selector: null
+
+  - name: "Wix"
+    careers_url: "https://www.wix.com/jobs/locations/israel"
+    strategy: playwright
+    job_list_selector: null
+    job_title_selector: null
+
+  - name: "Fiverr"
+    careers_url: "https://www.fiverr.com/careers"
+    strategy: bs4
+    job_list_selector: null
+    job_title_selector: null
+
+  - name: "Check Point"
+    careers_url: "https://www.checkpoint.com/careers/open-positions/"
+    strategy: playwright
+    job_list_selector: null
+    job_title_selector: null
+
+  - name: "Palo Alto Networks"
+    careers_url: "https://jobs.paloaltonetworks.com/en/jobs/?locations=Israel"
+    strategy: playwright
+    job_list_selector: null
+    job_title_selector: null
+
+  - name: "Amdocs"
+    careers_url: "https://www.amdocs.com/careers/job-search"
+    strategy: playwright
+    job_list_selector: null
+    job_title_selector: null
+
+  - name: "Radware"
+    careers_url: "https://www.radware.com/careers/open-positions/"
+    strategy: bs4
+    job_list_selector: null
+    job_title_selector: null
+
+  - name: "NICE Systems"
+    careers_url: "https://www.nice.com/about/careers"
+    strategy: playwright
+    job_list_selector: null
+    job_title_selector: null
+
+  - name: "Imperva"
+    careers_url: "https://www.imperva.com/company/careers/"
+    strategy: bs4
+    job_list_selector: null
+    job_title_selector: null

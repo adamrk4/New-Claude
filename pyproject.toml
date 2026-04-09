@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "career-agent"
+version = "0.1.0"
+description = "Semi-automated job search and application agent for tech-commercial roles in Central Israel"
+requires-python = ">=3.11"
+dependencies = [
+    "typer[all]>=0.12",
+    "rich>=13",
+    "playwright>=1.44",
+    "playwright-stealth>=1.0.6",
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "tenacity>=8.3",
+    "pydantic>=2.7",
+    "sqlalchemy>=2.0",
+    "alembic>=1.13",
+    "pypdf>=4.2",
+    "python-docx>=1.1",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "apscheduler>=3.10",
+    "loguru>=0.7",
+    "jinja2>=3.1",
+    "questionary>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "pytest-mock>=3.14",
+]
+
+[project.scripts]
+career-agent = "career_agent.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["career_agent*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

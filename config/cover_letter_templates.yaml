@@ -1,0 +1,32 @@
+# Cover letter / "Why you?" templates
+# The default template is used when no role-specific match is found.
+# Variables available: {company}, {role}, {applicant_name}
+
+default: >
+  As a CS graduate with a passion for the business side of tech, I bridge the gap
+  between complex engineering and client needs. While I am an entry-level candidate,
+  my technical foundation allows me to master your product's API and architecture
+  faster than a non-technical sales rep.
+
+solutions_engineer: >
+  As a CS graduate, I combine deep technical understanding with strong communication
+  skills — exactly the profile needed for a Solutions Engineer role at {company}.
+  I can quickly learn {company}'s product architecture and translate its capabilities
+  into compelling, client-specific value demonstrations.
+
+pre_sales: >
+  My CS background gives me the ability to understand your product at the code level,
+  while my sales-oriented mindset drives me to translate that knowledge into clear
+  business value for prospects. I am an entry-level candidate who can grow rapidly
+  in a pre-sales role at {company}.
+
+customer_success_engineer: >
+  I bring a CS graduate's technical rigour combined with a genuine drive to ensure
+  customer outcomes. At {company}, I would leverage my ability to read APIs,
+  diagnose integration issues, and communicate solutions clearly to both technical
+  and non-technical stakeholders.
+
+technical_account_manager: >
+  As a CS graduate who thinks commercially, I am drawn to the TAM role because it
+  sits at the intersection of engineering and business. I can serve as a credible
+  technical voice for {company}'s customers while driving strategic account growth.

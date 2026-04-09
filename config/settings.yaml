@@ -1,0 +1,125 @@
+# Career Agent Configuration
+# Edit this file to tune search filters, scrapers, and application behaviour.
+
+cv_path: "data/cv/my_cv.pdf"   # path to your CV (PDF or DOCX); relative to project root
+
+filters:
+  salary_min_nis: 16000
+  salary_field_value: 17500    # value entered in salary form fields
+  locations:
+    # English names
+    - "Tel Aviv"
+    - "Herzliya"
+    - "Petah Tikva"
+    - "Ramat Gan"
+    - "Bnei Brak"
+    - "Givatayim"
+    - "Holon"
+    - "Bat Yam"
+    - "Central Israel"
+    - "Center"
+    # Hebrew names
+    - "תל אביב"
+    - "הרצליה"
+    - "פתח תקווה"
+    - "רמת גן"
+    - "בני ברק"
+    - "גבעתיים"
+    - "חולון"
+    - "בת ים"
+    - "מרכז"
+  include_keywords:
+    - "Solutions Engineer"
+    - "Solution Engineer"
+    - "Pre-Sales"
+    - "PreSales"
+    - "Presales"
+    - "Pre Sales"
+    - "Customer Success Engineer"
+    - "Technical Account Manager"
+    - "TAM"
+    - "CSE"
+    - "Sales Engineer"
+    - "Technical Sales"
+    - "Technical Presales"
+  exclude_keywords:
+    - "Full Stack"
+    - "Full-Stack"
+    - "Fullstack"
+    - "QA Engineer"
+    - "QA Automation"
+    - "Quality Assurance"
+    - "Backend Developer"
+    - "Backend Engineer"
+    - "Frontend Developer"
+    - "Frontend Engineer"
+    - "DevOps"
+    - "Data Engineer"
+    - "ML Engineer"
+    - "Machine Learning Engineer"
+  experience_signals:           # job must match at least one of these to pass the experience filter
+    - "entry level"
+    - "entry-level"
+    - "junior"
+    - "0-2 years"
+    - "0-1 year"
+    - "1-2 years"
+    - "new grad"
+    - "new graduate"
+    - "graduate"
+    - "no experience required"
+    - "no prior experience"
+    - "fresh graduate"
+    - "recent graduate"
+  # Set to false to skip experience-level filtering (will then apply to all experience levels)
+  require_experience_signal: false
+
+scrapers:
+  linkedin:
+    enabled: true
+    max_jobs: 50
+    search_keywords: "Solutions Engineer OR Pre-Sales OR \"Technical Account Manager\" OR \"Customer Success Engineer\""
+    location: "Tel Aviv, Israel"
+    auth_state_path: "data/linkedin_auth.json"
+  alljobs:
+    enabled: true
+    max_pages: 5
+    base_url: "https://www.alljobs.co.il"
+  drushim:
+    enabled: true
+    max_pages: 5
+    base_url: "https://www.drushim.co.il"
+  glassdoor:
+    enabled: true
+    max_jobs: 30
+    location: "Israel"
+    auth_state_path: "data/glassdoor_auth.json"
+  indeed:
+    enabled: true
+    max_pages: 5
+    base_url: "https://il.indeed.com"
+    use_playwright_fallback: true
+  company_careers:
+    enabled: true
+    config_path: "config/target_companies.yaml"
+
+scheduling:
+  scrape_time: "08:00"          # daily scrape time (24h, local timezone)
+  report_day: "sunday"          # day of week for weekly report
+  report_time: "09:00"          # time of weekly report
+  timezone: "Asia/Jerusalem"
+
+application:
+  why_you_template: >
+    As a CS graduate with a passion for the business side of tech, I bridge the gap
+    between complex engineering and client needs. While I am an entry-level candidate,
+    my technical foundation allows me to master your product's API and architecture
+    faster than a non-technical sales rep.
+  salary_value: 17500
+  experience_answer: >
+    I hold a B.Sc. in Computer Science with hands-on academic projects including
+    system design, API integration, and software development. While I am an entry-level
+    candidate, my technical background enables me to rapidly learn and communicate
+    complex product capabilities.
+  screenshot_before_submit: true
+  submit_timeout_seconds: 30
