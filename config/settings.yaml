@@ -1,7 +1,7 @@
 # Career Agent Configuration
 # Edit this file to tune search filters, scrapers, and application behaviour.
 
-cv_path: "data/cv/my_cv.pdf"   # path to your CV (PDF or DOCX); relative to project root
+cv_path: "data/cv/adam_cv.txt"   # path to CV (PDF, DOCX, or TXT); relative to project root
 
 filters:
   salary_min_nis: 16000
@@ -111,15 +111,19 @@ scheduling:
 
 application:
   why_you_template: >
-    As a CS graduate with a passion for the business side of tech, I bridge the gap
-    between complex engineering and client needs. While I am an entry-level candidate,
-    my technical foundation allows me to master your product's API and architecture
-    faster than a non-technical sales rep.
+    I bring a combination that is rare at this level: a B.Sc. in Computer Science from
+    HIT-Holon combined with hands-on, quota-driven sales experience. I have managed
+    end-to-end sales processes, handled price negotiations, and run high-volume outbound
+    pipelines (150+ calls daily). I can engage a CTO-level buyer on API architecture in
+    the morning and close a deal in the afternoon. I will ramp faster than either a
+    pure engineer or a non-technical salesperson.
   salary_value: 17500
   experience_answer: >
-    I hold a B.Sc. in Computer Science with hands-on academic projects including
-    system design, API integration, and software development. While I am an entry-level
-    candidate, my technical background enables me to rapidly learn and communicate
-    complex product capabilities.
+    I hold a B.Sc. in Computer Science (HIT-Holon, 2024) with practical skills in
+    Python, JavaScript, REST APIs, and AI/LLM workflow automation (Make, n8n, Zapier).
+    Alongside my degree, I have real sales experience: managing end-to-end sales cycles
+    at a car dealership, leading a team of 6 as a shift manager, and running 150+
+    outbound calls per day as a lead generation rep. This combination allows me to
+    understand your product technically and communicate its value commercially from day one.
   screenshot_before_submit: true
   submit_timeout_seconds: 30

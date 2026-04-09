@@ -75,8 +75,10 @@ def parse_cv(path: str | Path) -> CVData:
         raw = _parse_pdf(path)
     elif suffix in (".docx", ".doc"):
         raw = _parse_docx(path)
+    elif suffix == ".txt":
+        raw = path.read_text(encoding="utf-8")
     else:
-        raise ValueError(f"Unsupported CV format: {suffix}. Use PDF or DOCX.")
+        raise ValueError(f"Unsupported CV format: {suffix}. Use PDF, DOCX, or TXT.")
 
     # Extract first non-empty line as name candidate
     lines = [l.strip() for l in raw.splitlines() if l.strip()]
