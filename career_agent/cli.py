@@ -195,6 +195,54 @@ def _interactive_approve(pending) -> list[int]:
 
 
 # ---------------------------------------------------------------------------
+# skipped
+# ---------------------------------------------------------------------------
+
+@app.command()
+def skipped():
+    """Show jobs that were filtered out and why — useful for debugging filters."""
+    from sqlalchemy import select
+    from rich.table import Table
+    from rich import box
+    from career_agent.db.engine import init_db, get_session
+    from career_agent.models.job import JobListingORM
+
+    init_db()
+    session = get_session()
+    with session:
+        jobs = session.scalars(
+            select(JobListingORM)
+            .where(JobListingORM.status == "SKIPPED")
+            .order_by(JobListingORM.id.desc())
+            .limit(100)
+        ).all()
+
+    if not jobs:
+        console.print("[green]No skipped jobs.[/green]")
+        raise typer.Exit()
+
+    table = Table(title=f"Skipped Jobs ({len(jobs)} shown)", box=box.ROUNDED)
+    table.add_column("ID", width=5, justify="right")
+    table.add_column("Title", min_width=30)
+    table.add_column("Company", min_width=18)
+    table.add_column("Platform", width=12)
+    table.add_column("Reason", style="dim")
+
+    for job in jobs:
+        table.add_row(
+            str(job.id),
+            job.title,
+            job.company,
+            job.source,
+            job.filter_reason or "—",
+        )
+
+    console.print()
+    console.print(table)
+    console.print()
+
+
+# ---------------------------------------------------------------------------
 # submit
 # ---------------------------------------------------------------------------
 

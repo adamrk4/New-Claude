@@ -42,6 +42,18 @@ filters:
     - "Sales Engineer"
     - "Technical Sales"
     - "Technical Presales"
+    # Hebrew equivalents (for AllJobs / Drushim)
+    - "מהנדס פתרונות"
+    - "אינג'ינייר פתרונות"
+    - "פרה-מכירות"
+    - "פרה מכירות"
+    - "קדם מכירות"
+    - "הצלחת לקוח"
+    - "מנהל לקוח טכני"
+    - "מנהל תיקי לקוחות"
+    - "מהנדס מכירות"
+    - "יועץ פתרונות"
+    - "מהנדס לפני מכירה"
   exclude_keywords:
     - "Full Stack"
     - "Full-Stack"
